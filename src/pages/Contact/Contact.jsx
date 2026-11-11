@@ -49,7 +49,7 @@ export default function Contact() {
                 <div>
                   <h6 className="fw-bold mb-1">Phone</h6>
                   <p className="section-copy mb-0">
-                    Add your official phone number
+                    official phone number
                   </p>
                 </div>
               </div>
