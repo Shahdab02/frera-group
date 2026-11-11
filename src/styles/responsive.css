@@ -1,0 +1,34 @@
+@media (max-width: 991.98px) {
+  .section-space {
+    padding: 56px 0;
+  }
+
+  .navbar-collapse {
+    padding: 12px 0 18px;
+  }
+
+  .navbar .nav-link {
+    padding-left: 0 !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .top-strip .contact-extra {
+    display: none;
+  }
+
+  .section-space {
+    padding: 44px 0;
+  }
+
+  .page-hero {
+    padding: 55px 0;
+  }
+
+  .category-card img,
+  .category-card .catalog-image-fallback,
+  .product-card img,
+  .product-card .catalog-image-fallback {
+    height: 165px;
+  }
+}
