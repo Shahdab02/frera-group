@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import freraLogo from '../assets/icons/Ficon.jpeg'
+import { contactInfo } from '../data/contactInfo'
 
 export default function Footer() {
   return (
@@ -6,10 +8,13 @@ export default function Footer() {
       <div className="container">
         <div className="row g-4 pb-4">
           <div className="col-lg-4">
-            <div className="brand-mark text-white">
-              FRERA
-              <small>GROUP OF INDUSTRIES</small>
-            </div>
+            <Link
+              to="/"
+              className="footer-brand"
+              aria-label="FRERA Group of Industries home"
+            >
+              <img src={freraLogo} alt="FRERA Group of Industries" />
+            </Link>
             <p className="mt-4 pe-lg-5">
               A multi-category business platform connecting enquiries across
               property, vehicles, metals and industrial products.
@@ -34,17 +39,17 @@ export default function Footer() {
 
           <div className="col-lg-3">
             <h5>Contact</h5>
-            <p>
-              <i className="bi bi-geo-alt me-2" />
+            <p className="footer-contact">
+              <i className="bi bi-geo-alt" aria-hidden="true" />
               Delhi NCR, India
             </p>
-            <p>
-              <i className="bi bi-envelope me-2" />
-              Add your business email
+            <p className="footer-contact">
+              <i className="bi bi-envelope" aria-hidden="true" />
+              <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
             </p>
-            <p>
-              <i className="bi bi-telephone me-2" />
-              Add your phone number
+            <p className="footer-contact">
+              <i className="bi bi-telephone" aria-hidden="true" />
+              <a href={`tel:${contactInfo.phoneLink}`}>{contactInfo.phone}</a>
             </p>
           </div>
         </div>

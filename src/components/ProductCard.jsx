@@ -11,10 +11,7 @@ export default function ProductCard({ item }) {
         category={item.category}
       />
       <div className="card-content">
-        <div className="d-flex flex-wrap gap-2">
-          <span className="tag">{item.category}</span>
-          {item.isExample && <span className="tag">Sample listing</span>}
-        </div>
+        <span className="tag">{item.category}</span>
         <h3 className="h5 card-title mt-3">{item.title}</h3>
         <p className="section-copy small">
           <i className="bi bi-geo-alt me-1" />

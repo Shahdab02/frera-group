@@ -66,13 +66,6 @@ export default function ProductDetails() {
                 <span className="section-kicker">Overview</span>
                 <h2 className="section-heading mt-2">About this listing</h2>
                 <p className="section-copy mb-0">{product.description}</p>
-                {product.isExample && (
-                  <p className="product-trust-note mt-3 mb-0">
-                    <i className="bi bi-info-circle me-2" />
-                    This is a sample listing for demonstration. Confirm actual
-                    product details, pricing and availability with our team.
-                  </p>
-                )}
               </div>
             </div>
 

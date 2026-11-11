@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { contactInfo } from '../data/contactInfo'
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false)
@@ -21,7 +22,7 @@ export default function ContactForm() {
     )
 
     window.location.href =
-      `mailto:YOUR_EMAIL@example.com?subject=${subject}&body=${body}`
+      `mailto:${contactInfo.email}?subject=${subject}&body=${body}`
     setSent(true)
   }
 
@@ -90,8 +91,8 @@ export default function ContactForm() {
 
           {sent && (
             <p className="small text-success mt-2 mb-0">
-              Your email app should open with the enquiry. Configure the
-              recipient email in ContactForm.jsx.
+              Your email app should open with the enquiry addressed to{' '}
+              {contactInfo.email}.
             </p>
           )}
         </div>

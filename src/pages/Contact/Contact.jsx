@@ -1,6 +1,7 @@
 import PageHero from '../../components/PageHero'
 import SectionHeading from '../../components/SectionHeading'
 import ContactForm from '../../components/ContactForm'
+import { contactInfo } from '../../data/contactInfo'
 
 export default function Contact() {
   return (
@@ -17,7 +18,7 @@ export default function Contact() {
               <SectionHeading
                 eyebrow="Contact FRERA"
                 title="We are here to help"
-                text="Use the enquiry form or contact our team through your preferred channel. Replace the sample contact details with your verified business information before publishing."
+                text="Use the enquiry form or contact our team directly through your preferred channel."
               />
 
               <div className="d-flex gap-3 my-4">
@@ -36,9 +37,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <h6 className="fw-bold mb-1">Email</h6>
-                  <p className="section-copy mb-0">
-                    Add your official email address
-                  </p>
+                  <a
+                    className="section-copy mb-0 d-inline-block"
+                    href={`mailto:${contactInfo.email}`}
+                  >
+                    {contactInfo.email}
+                  </a>
                 </div>
               </div>
 
@@ -48,9 +52,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <h6 className="fw-bold mb-1">Phone</h6>
-                  <p className="section-copy mb-0">
-                    official phone number
-                  </p>
+                  <a
+                    className="section-copy mb-0 d-inline-block"
+                    href={`tel:${contactInfo.phoneLink}`}
+                  >
+                    {contactInfo.phone}
+                  </a>
                 </div>
               </div>
             </div>

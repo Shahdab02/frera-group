@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import Collapse from 'bootstrap/js/dist/collapse'
 import freraLogo from '../assets/icons/Ficon.jpeg'
+import { contactInfo } from '../data/contactInfo'
 
 const navClass = ({ isActive }) => `nav-link${isActive ? ' active' : ''}`
 
@@ -24,14 +25,14 @@ export default function Navbar() {
     <>
       <div className="top-strip">
         <div className="container d-flex justify-content-between">
-          <span>
+          <a href={`mailto:${contactInfo.email}`}>
             <i className="bi bi-envelope me-2" />
-            Contact FRERA Group of Industries
-          </span>
-          <span className="contact-extra">
+            {contactInfo.email}
+          </a>
+          <a className="contact-extra" href={`tel:${contactInfo.phoneLink}`}>
             <i className="bi bi-telephone me-2" />
-            Call us for product enquiries
-          </span>
+            {contactInfo.phone}
+          </a>
         </div>
       </div>
 

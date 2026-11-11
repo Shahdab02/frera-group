@@ -28,6 +28,14 @@ img {
   padding: 9px 0;
 }
 
+.top-strip a {
+  color: inherit;
+}
+
+.top-strip a:hover {
+  color: #fff;
+}
+
 .site-navbar {
   background: #fff;
   box-shadow: 0 5px 24px rgba(8, 43, 85, 0.07);
@@ -289,6 +297,23 @@ img {
   padding: 62px 0 22px;
 }
 
+.footer-brand {
+  display: inline-flex;
+  width: 178px;
+  height: 66px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.footer-brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .site-footer h5 {
   color: #fff;
   font-weight: 800;
@@ -303,6 +328,27 @@ img {
 
 .site-footer a:hover {
   color: #fff;
+}
+
+.site-footer .footer-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 14px 0;
+  line-height: 1.6;
+}
+
+.site-footer .footer-contact > i {
+  flex: 0 0 16px;
+  margin-top: 4px;
+  color: #a9d7ff;
+}
+
+.site-footer .footer-contact a {
+  display: inline;
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .form-control,
