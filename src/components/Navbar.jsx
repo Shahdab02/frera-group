@@ -109,9 +109,13 @@ export default function Navbar() {
               </NavLink>
             </div>
 
-            <Link to="/contact" className="btn btn-frera" onClick={closeNav}>
-              Get in Touch <i className="bi bi-arrow-up-right ms-1" />
-            </Link>
+            <a
+              href={`tel:${contactInfo.phoneLink}`}
+              className="btn btn-frera"
+              onClick={closeNav}
+            >
+              Get in Touch <i className="bi bi-telephone ms-1" />
+            </a>
           </div>
         </div>
       </nav>
