@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import Collapse from 'bootstrap/js/dist/collapse'
+import freraLogo from '../assets/icons/Ficon.jpeg'
 
 const navClass = ({ isActive }) => `nav-link${isActive ? ' active' : ''}`
 
@@ -36,9 +37,13 @@ export default function Navbar() {
 
       <nav className="navbar navbar-expand-lg site-navbar sticky-top">
         <div className="container">
-          <Link className="navbar-brand brand-mark" to="/" onClick={closeNav}>
-            FRERA
-            <small>GROUP OF INDUSTRIES</small>
+          <Link
+            className="navbar-brand brand-mark"
+            to="/"
+            onClick={closeNav}
+            aria-label="FRERA Group of Industries home"
+          >
+            <img src={freraLogo} alt="FRERA Group of Industries" />
           </Link>
 
           <button
